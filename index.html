@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Flexy lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Flexy admin lite design, Flexy admin lite dashboard bootstrap 5 dashboard template">
+    <meta name="description"
+        content="Flexy Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Toko Grosir - Ikbal</title>
+    <link rel="canonical" href="https://www.wrappixel.com/templates/Flexy-admin-lite/" />
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <!-- Custom CSS -->
+    <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../dist/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css"
+        integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .dropify-wrapper {
+            border: 1px solid #e2e7f1;
+            border-radius: .3rem;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+
+        .dropify-wrapper .dropify-message p {
+            margin: 5px 410px 0 !important;
+        }
+
+        .colored-toast.swal2-icon-success {
+            background-color: #a5dc86 !important;
+        }
+
+        .colored-toast.swal2-icon-error {
+            background-color: #f27474 !important;
+        }
+
+        .colored-toast.swal2-icon-warning {
+            background-color: #f8bb86 !important;
+        }
+
+        .colored-toast.swal2-icon-info {
+            background-color: #3fc3ee !important;
+        }
+
+        .colored-toast.swal2-icon-question {
+            background-color: #87adbd !important;
+        }
+
+        .colored-toast .swal2-title {
+            color: white;
+        }
+
+        .colored-toast .swal2-close {
+            color: white;
+        }
+
+        .colored-toast .swal2-html-container {
+            color: white;
+        }
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+        data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar" data-navbarbg="skin6">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <div class="navbar-header" data-logobg="skin6">
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <a class="navbar-brand" href="/">
+                        <!-- Logo icon -->
+                        <b class="logo-icon">
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <!-- <img src="assets/images/js.png" alt="homepage" width="50px" height="50px" class="dark-logo" /> -->
+                            <!-- Light Logo icon -->
+                            <!-- <img src="assets/images/js.png" alt="homepage" width="50px" height="50px" class="light-logo" /> -->
+                            IKBAL GROSIR
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text -->
+                        <!-- <span class="logo-text"> -->
+                        <!-- dark Logo text -->
+                        <!-- <img src="assets/images/js.png" alt="homepage" width="50px" height="50px" class="dark-logo" /> -->
+                        <!-- Light Logo text -->
+                        <!-- <img src="assets/images/js.png" class="light-logo" width="50px" height="50px" alt="homepage" /> -->
+                        <!-- </span> -->
+                    </a>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                            class="mdi mdi-menu"></i></a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-start me-auto">
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <!-- <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark"
+                                href="javascript:void(0)"><i class="mdi mdi-magnify me-1"></i> <span class="font-16">Search</span></a>
+                            <form class="app-search position-absolute">
+                                <input type="text" class="form-control" placeholder="Search &amp; enter"> <a
+                                    class="srh-btn"><i class="mdi mdi-window-close"></i></a>
+                            </form>
+                        </li> -->
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-end">
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic"
+                                href="https://github.com/hippies67" id="navbarDropdown">
+                                <img src="assets/images/ikbal.jpg" alt="user" class="rounded-circle" width="31">
+                                <div class="d-none d-md-flex">
+                                    <span class="ms-2">Hi,
+                                        <span class="text-dark fw-bold">Ikbal Malik R</span></span>
+                                    <span>
+                                        <i data-feather="chevron-down" class="feather-sm"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end user-dd animated"
+                                aria-labelledby="navbarDropdown">
+                                <!-- <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i>
+                                    My Profile</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i>
+                                    My Balance</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i>
+                                    Inbox</a>
+                            </ul> -->
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/"
+                                aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Data
+                                    Barang</span></a></li>
+                    </ul>
+
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0 d-flex align-items-center">
+                                <li class="breadcrumb-item"><a href="/" class="link"><i
+                                            class="mdi mdi-home-outline fs-4"></i></a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Toko Grosir</li>
+                            </ol>
+                        </nav>
+                        <h1 class="mb-0 fw-bold">Data Barang</h1>
+                        <!-- <h6 class="card-subtitle mt-2">Berikut merupakan semua barang yang tersedia</h6> -->
+                    </div>
+                    <div class="col-6">
+                        <div class="text-end upgrade-btn">
+                            <button type="button" class="btn btn-primary text-white" onclick="tambah()">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Sales chart -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <input onkeyup="search(this)">
+<div id="result">[{"first_name":"abc","account_id":1},{"first_name":"Test","account_id":2},{"first_name":"Hasad","account_id":3}]</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="
+                                  table
+                                  mb-0
+                                  table-hover
+                                  align-middle
+                                  varient-table
+                                  text-nowrap
+                                " id="tabel">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Barang</th>
+                                                <th scope="col">Harga</th>
+                                                <th scope="col">Kuantitas</th>
+                                                <th scope="col">Total</th>
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="addGrosirModal">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Tambah Data Barang</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal" id="tambahUser" action="javascript:void(0)">
+
+                                    <div class="form-group">
+                                        <div class="col-12">
+                                            <label for="nama_barang">Nama Barang</label>
+                                            <input class="form-control mb-1" type="text" id="nama_barang"
+                                                placeholder="Masukan Nama Barang" name="nama_barang" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-12" id="add_gambar_wrap">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-12">
+                                            <label for="harga">Harga</label>
+                                            <input class="form-control mb-1" type="number" id="harga"
+                                                placeholder="Masukan Harga" name="harga" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-12">
+                                            <label for="kuantitas">Kuantitas</label>
+                                            <input class="form-control mb-1" type="number" id="kuantitas"
+                                                placeholder="Masukan Kuantitas" name="kuantitas" required>
+                                        </div>
+                                    </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger light text-white" data-bs-dismiss="modal"
+                                    aria-label="Close">Tutup</button>
+                                <button type="submit" class="btn btn-primary light" id="tambahButton"
+                                    onclick="simpan_tambah()">Simpan Data</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="editGrosirModal">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Edit Data Barang</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal" id="editUser" method="POST" action="javascript:void(0)">
+                                    <input type="hidden" id="barang_id" value="">
+                                    <input type="hidden" id="edit_gambar_value" value="">
+                                    <div class="form-group">
+                                        <div class="col-12">
+                                            <label for="edit_nama_barang">Nama Barang</label>
+                                            <input class="form-control mb-1" type="text" id="edit_nama_barang"
+                                                placeholder="Masukan Nama Barang" name="edit_nama_barang" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-12" id="edit_gambar_wrap">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-12">
+                                            <label for="edit_harga">Harga</label>
+                                            <input class="form-control mb-1" type="number" id="edit_harga"
+                                                placeholder="Masukan Harga" name="edit_harga" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-12">
+                                            <label for="edit_kuantitas">Kuantitas</label>
+                                            <input class="form-control mb-1" type="number" id="edit_kuantitas"
+                                                placeholder="Masukan Kuantitas" name="edit_kuantitas" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger light text-white"
+                                            data-bs-dismiss="modal" aria-label="Close">Tutup</button>
+                                        <button type="submit" class="btn btn-primary light" id="editButton"
+                                            onclick="simpan_edit()">Simpan Perubahan</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer text-center">
+                This website was created by <a href="https://github.com/hippies67">Ikbal</a>.
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../dist/js/app-style-switcher.js"></script>
+    <!--Wave Effects -->
+    <script src="../dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="../dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../dist/js/custom.js"></script>
+    <!--This page JavaScript -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"
+        integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        const data = [{
+                "first_name": "abc",
+                "account_id": 1
+            },
+            {
+                "first_name": "Test ll",
+                "account_id": 2
+            },
+            {
+                "first_name": "Hasad",
+                "account_id": 3
+            }
+        ];
+
+        function search(input) {
+            const filtered = data.filter(element => {
+                for (const value of Object.values(element)) {
+                    if (value.toString().toLowerCase().includes(input.value.toLowerCase())) return true;
+                }
+            })
+            document.getElementById("result").innerText = JSON.stringify(filtered)
+        }
+    </script>
+
+    <script>
+        $('.dropify').dropify({
+            messages: {
+                'default': '',
+            }
+        });
+    </script>
+    <script>
+        var barang = [
+            "Aqua 600Ml",
+            "Indomie Goreng",
+            "Good Day Cappuccino",
+            "Marlboro Red"
+        ];
+
+        var gambar = [
+            "assets/images/aqua.png",
+            "assets/images/indomie.png",
+            "assets/images/goodday-cappuccino.jfif",
+            "assets/images/marlboro-red.png"
+        ];
+
+        var harga = [
+            "3200",
+            "3000",
+            "3000",
+            "35000"
+        ];
+
+        var kuantitas = [
+            "5",
+            "3",
+            "2",
+            "1"
+        ];
+
+        var total = [
+            "300000",
+            "300000",
+            "1000000",
+            "1500000"
+        ];
+
+        function tampil() {
+            var tabel = document.getElementById("tabel");
+            tabel.innerHTML =
+                "<tr><th scope='col'>Barang</th><th scope='col'>Harga</th><th scope='col'>Kuantitas</th><th scope='col'>Total</th><th scope='col'></th></tr>";
+            for (let i = 0; i < barang.length; i++) {
+                var btnEdit =
+                    "<button class='btn btn-sm light btn-warning' onclick='edit(" +
+                    i + ")'><i class='bi bi-pencil-square'></i></button>";
+                var btnHapus = "<button class='btn btn-sm light btn-danger text-white' onclick='deleteDataAlert(" +
+                    i + ")'><i class='bi bi-trash'></i></button>";
+                var one =
+                    "<div class='d-flex align-items-center'><div class='flex-shrink-0'><img src='" + gambar[i] +
+                    "' class='img-fluid' id='gambar_result" + i + "' width='50'></div><div class='ms-3'><h4>" +
+                    barang[i] + "</h4></div></div>";
+                j = i + 1;
+                tabel.innerHTML += "<tr><td width='400'>" + one + "</td><td>" + harga[i] + "</td><td>" +
+                    kuantitas[i] + "</td><td>" + total[i] + "</td><td>" + btnEdit + " " + btnHapus + "</tr>";
+            }
+        }
+
+        function tambah() {
+            $('#addGrosirModal').modal('toggle');
+            $("#nama_barang").val('');
+
+            $("#add_gambar_wrap").html("");
+            $("#add_gambar_wrap").append(
+                "<label for='formFile' class='form-label'>Gambar</label> <input type='file' class='dropify' name='gambar' id='gambar' data-allowed-file-extensions='png jpg jpeg svg' data-show-remove='false'>"
+            );
+
+            $('.dropify').dropify({
+                messages: {
+                    'default': '',
+                }
+            });
+            $("#harga").val('');
+            $("#kuantitas").val('');
+        }
+
+        function simpan_tambah() {
+            var nama_barang_val = $("#nama_barang").val();
+            var gambar_val = $("#gambar").val();
+            var harga_barang_val = $("#harga").val();
+            var kuantitas_val = $("#kuantitas").val();
+
+            if (nama_barang_val != "" && gambar_val != "" && harga_barang_val != "" && kuantitas_val != "") {
+                $('#addGrosirModal').modal('hide');
+
+                let total_harga = harga_barang_val * kuantitas_val;
+                barang.push(nama_barang_val);
+
+                var input = document.getElementById('gambar');
+                const file = input.files[0];
+                if (file) {
+                    let reader = new FileReader();
+                    reader.onload = function (event) {
+                        $("#gambar_result" + parseInt(gambar.length))
+                            .attr("src", event.target.result);
+                        gambar.push(event.target.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+
+
+                harga.push(harga_barang_val);
+                kuantitas.push(kuantitas_val);
+                total.push(total_harga);
+
+                tampil();
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Barang telah berhasil ditambahkan.',
+                    target: 'body',
+                    iconColor: 'white',
+                    customClass: {
+                        popup: 'colored-toast'
+                    },
+                    toast: true,
+                    position: 'top-right',
+                    showConfirmButton: false,
+                    timerProgressBar: true,
+                    timer: 3500,
+                });
+            }
+        }
+
+        function edit(id) {
+            $('#editGrosirModal').modal('toggle');
+            $("#barang_id").val(id);
+            $("#edit_nama_barang").val(barang[id]);
+            $("#edit_gambar_value").val(gambar[id]);
+
+            $("#edit_gambar_wrap").html("");
+            $("#edit_gambar_wrap").append(
+                "<label for='formFile' class='form-label'>Gambar</label><br/><div class='d-flex justify-content-content'><img src='" +
+                $("#edit_gambar_value").val() +
+                "' class='img-fluid w-50 p-4' style='margin: 0 auto !important;' /></div><input type='file' class='dropify' name='edit_gambar' id='edit_gambar' data-allowed-file-extensions='png jpg jpeg svg' data-default-file='' data-show-remove='false'>"
+            );
+
+            // var file = document.getElementById('edit_gambar_value');
+            //     if (file) {
+            //         let reader = new FileReader();
+            //         reader.onload = function (event) {
+            //                 $("#edit_gambar_wrap").html("");
+            //                 $("#edit_gambar_wrap").append(
+            //                     "<label for='formFile' class='form-label'>Gambar</label> <input type='file' class='dropify' name='edit_gambar' id='edit_gambar' data-allowed-file-extensions='png jpg jpeg svg' data-default-file='http://127.0.0.1:5500/" +
+            //                     event.target.result + "' data-show-remove='false'>");
+            //         };
+            //         reader.readAsDataURL(file);
+            // }
+
+            $("#edit_harga").val(harga[id]);
+            $("#edit_kuantitas").val(kuantitas[id]);
+
+            $('.dropify').dropify({
+                messages: {
+                    'default': '',
+                }
+            });
+        }
+
+        function simpan_edit() {
+            var nama_barang_val = $("#edit_nama_barang").val();
+            var gambar_val = $("#edit_gambar").val();
+            var harga_val = $("#edit_harga").val();
+            var kuantitas_val = $("#edit_kuantitas").val();
+            if (nama_barang_val != "" && harga_val != "" && kuantitas_val != "") {
+                $('#editGrosirModal').modal('hide');
+                barang[$("#barang_id").val()] = nama_barang_val;
+                gambar[$("#barang_id").val()] = gambar_val;
+
+                var input = document.getElementById('edit_gambar');
+                const file = input.files[0];
+                if (file) {
+                    let reader = new FileReader();
+                    reader.onload = function (event) {
+                        $("#gambar_result" + $("#barang_id").val())
+                            .attr("src", event.target.result);
+                        gambar[$("#barang_id").val()] = event.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+
+                $('.dropify').dropify({
+                    messages: {
+                        'default': '',
+                    }
+                });
+
+                harga[$("#barang_id").val()] = harga_val;
+                kuantitas[$("#barang_id").val()] = kuantitas_val;
+                tampil();
+
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Barang telah berhasil diubah.',
+                    target: 'body',
+                    iconColor: 'white',
+                    customClass: {
+                        popup: 'colored-toast'
+                    },
+                    toast: true,
+                    position: 'top-right',
+                    showConfirmButton: false,
+                    timerProgressBar: true,
+                    timer: 3500,
+                });
+            }
+
+        }
+
+        function hapus(id) {
+            barang.splice(id, 1);
+            harga.splice(id, 1);
+            kuantitas.splice(id, 1);
+            total.splice(id, 1);
+            tampil();
+        }
+
+        tampil();
+    </script>
+
+    <script>
+        function deleteDataAlert(id) {
+            Swal.fire({
+                title: "Hapus Data Barang?",
+                text: `Apakah kamu yakin untuk menghapus data ini?`,
+                icon: "warning",
+                showCancelButton: !0,
+                confirmButtonColor: "rgb(11, 42, 151)",
+                cancelButtonColor: "rgb(209, 207, 207)",
+                confirmButtonText: "Ya, hapus!",
+                cancelButtonText: "Batal"
+            }).then(function (t) {
+                if (t.value) {
+                    hapus(id)
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Barang telah berhasil dihapus.',
+                        target: 'body',
+                        iconColor: 'white',
+                        customClass: {
+                            popup: 'colored-toast'
+                        },
+                        toast: true,
+                        position: 'top-right',
+                        showConfirmButton: false,
+                        timerProgressBar: true,
+                        timer: 3500,
+                    });
+                }
+            })
+
+        }
+    </script>
+</body>
+
+</html>
