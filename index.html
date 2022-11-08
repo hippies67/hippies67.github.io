@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css"
         integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
 
     <style>
         .dropify-wrapper {
@@ -248,8 +249,10 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="form-group" style="margin-bottom: 20px;">
-                            <!-- <input onkeyup="search(this)">
-<div id="result">[{"first_name":"abc","account_id":1},{"first_name":"Test","account_id":2},{"first_name":"Hasad","account_id":3}]</div> -->
+                            <input class="form-control" id="searchValue" onkeyup="search()"
+                                placeholder="Cari Barang...">
+                            <div id="result">
+                            </div>
                         </div>
                         <div class="card">
                             <div class="card-body p-0">
@@ -427,30 +430,7 @@
         integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
-        const data = [{
-                "first_name": "abc",
-                "account_id": 1
-            },
-            {
-                "first_name": "Test ll",
-                "account_id": 2
-            },
-            {
-                "first_name": "Hasad",
-                "account_id": 3
-            }
-        ];
-
-        function search(input) {
-            const filtered = data.filter(element => {
-                for (const value of Object.values(element)) {
-                    if (value.toString().toLowerCase().includes(input.value.toLowerCase())) return true;
-                }
-            })
-            document.getElementById("result").innerText = JSON.stringify(filtered)
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 
     <script>
         $('.dropify').dropify({
@@ -459,6 +439,27 @@
             }
         });
     </script>
+
+    <script>
+        function search(value) {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchValue");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("tabel");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
     <script>
         var barang = [
             "Aqua 600Ml",
@@ -466,6 +467,7 @@
             "Good Day Cappuccino",
             "Marlboro Red"
         ];
+
 
         var gambar = [
             "assets/images/aqua.png",
@@ -494,7 +496,9 @@
             "1000000",
             "1500000"
         ];
-
+        // <a data-fancybox='gallery' href='" + gambar[i] +"'>
+        //     <img class="img-fluid rounded" style="height: 150px; object-fit: cover;" src="{{ $gambar_produk ? Storage::url($gambar_produk->url) : '' }}"/>
+        // </a>
         function tampil() {
             var tabel = document.getElementById("tabel");
             tabel.innerHTML =
@@ -506,13 +510,39 @@
                 var btnHapus = "<button class='btn btn-sm light btn-danger text-white' onclick='deleteDataAlert(" +
                     i + ")'><i class='bi bi-trash'></i></button>";
                 var one =
-                    "<div class='d-flex align-items-center'><div class='flex-shrink-0'><img src='" + gambar[i] +
-                    "' class='img-fluid' id='gambar_result" + i + "' width='50'></div><div class='ms-3'><h4>" +
+                    "<div class='d-flex align-items-center'><div class='flex-shrink-0'><a data-fancybox='gallery' href='" +
+                    gambar[i] + "'><img src='" + gambar[i] +
+                    "' class='img-fluid' id='gambar_result" + i + "' width='50'></a></div><div class='ms-3'><h4>" +
                     barang[i] + "</h4></div></div>";
                 j = i + 1;
                 tabel.innerHTML += "<tr><td width='400'>" + one + "</td><td>" + harga[i] + "</td><td>" +
                     kuantitas[i] + "</td><td>" + total[i] + "</td><td>" + btnEdit + " " + btnHapus + "</tr>";
             }
+
+            Fancybox.bind('[data-fancybox="gallery"]', {
+                Toolbar: {
+                    display: [{
+                            id: "prev",
+                            position: "center"
+                        },
+                        {
+                            id: "counter",
+                            position: "center"
+                        },
+                        {
+                            id: "next",
+                            position: "center"
+                        },
+                        "zoom",
+                        "slideshow",
+                        "fullscreen",
+                        "download",
+                        "thumbs",
+                        "close",
+                    ],
+                },
+            });
+
         }
 
         function tambah() {
@@ -667,6 +697,7 @@
 
         function hapus(id) {
             barang.splice(id, 1);
+            gambar.splice(id, 1);
             harga.splice(id, 1);
             kuantitas.splice(id, 1);
             total.splice(id, 1);
