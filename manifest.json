@@ -1,14 +1,14 @@
 {
-  "name": "Aplikasi Rental Mobil",
-  "short_name": "rental_mobil",
-  "description": "Membuat Rental Mobil sederhana dengan javascript PWA ",
+  "name": "Ikbal Grosir",
+  "short_name": "IkbalGrosir",
+  "description": "Membuat Aplikasi Grosir sederhana dengan javascript PWA ",
   "icons": [
     {
-      "src": "logo_unsap.png",
+      "src": "logo.png",
       "type": "image/png"
     },
     {
-      "src": "logo_unsap.png",
+      "src": "logo.png",
       "sizes": "192x192",
       "type": "image/png"
     }

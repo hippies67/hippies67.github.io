@@ -1,5 +1,5 @@
 const CACHE_NAME = "SW-001";
-const toCache = ["/", "manifest.json", "assets/js/register.js", "logo.png"];
+const toCache = ["/", "manifest.json", "dist/js/register.js", "logo.png"];
 self.addEventListener("beforeinstallprompt", (e) => {
   e.preventDefault();
   deferredPrompt = e;
