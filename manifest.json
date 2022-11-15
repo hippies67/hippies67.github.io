@@ -4,11 +4,11 @@
   "description": "Membuat Aplikasi Grosir sederhana dengan javascript PWA ",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "logo.png",
       "type": "image/png"
     },
     {
-      "src": "icon-192.png",
+      "src": "logo.png",
       "sizes": "192x192",
       "type": "image/png"
     }
